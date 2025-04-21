@@ -338,11 +338,14 @@ font-size: 1rem;
 
  @media (min-width: 768px) {
      .contenedor {
+        justify-content: center;
+        flex-wrap: wrap;
          flex-direction: row;
      }
-
+   
      .bloque {
-         flex: 1;
+        max-width: 300px;
+         flex-wrap: wrap;
      }
  }
 
