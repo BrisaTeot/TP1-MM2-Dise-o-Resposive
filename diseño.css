@@ -344,7 +344,7 @@ font-size: 1rem;
      }
    
      .bloque {
-        max-width: 300px;
+        max-width: 280px;
          flex-wrap: wrap;
      }
  }
