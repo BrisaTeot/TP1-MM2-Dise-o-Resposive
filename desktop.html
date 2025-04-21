@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Responsive - Ejemplo</title>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+
+<body>
+    <header>
+        <h1>Diseño Responsive</h1>
+    </header>
+
+    <section class="intro">
+        <h2>Un poco de historia</h2>
+        <p>El concepto de diseño responsive fue planteado en 2010 por <b>Ethan Marcotte</b>, quien escribió un artículo
+            que cambió la forma de pensar el diseño web. Antes de eso, era común hacer versiones diferentes de un mismo
+            sitio: una para escritorio y otra para móviles.
+
+            Su enfoque propuso usar los mismos principios del diseño gráfico flexible, pero llevados al entorno digital,
+            aprovechando CSS3 y las capacidades de los navegadores modernos.</p>
+    </section>
+
+    <section class="intro">
+        <h2>¿Qué es el diseño responsive?</h2>
+        <p>El diseño responsive (o diseño adaptable) es una técnica de diseño web que permite que un sitio se adapte
+            automáticamente a diferentes tamaños de pantalla y dispositivos, como celulares, tablets, laptops y
+            monitores grandes. En lugar de crear versiones separadas para cada dispositivo, se desarrolla una sola
+            página capaz de ajustarse según el entorno donde se visualiza.</p>
+    </section>
+
+    <section class="intro">
+        <h2>¿Cómo se hace el diseño responsive?</h2>
+        <div class="tarjeta-expandible" onclick="mostrarExplicacion()">
+            Para lograrlo en lugar de hacer una sola versión fija de la web, usamos reglas condicionales en CSS
+            llamadas media queries. Estas reglas permiten aplicar distintos estilos según el ancho del dispositivo u
+            otras características como la orientación.
+        </div>
+
+        <div class="card-info" id="explicacion">
+            <p><b>¿Qué son?</b> Son reglas condicionales en CSS que permiten aplicar estilos distintos según el
+                dispositivo.</p>
+            <p><b>¿Cómo se escriben?</b></p>
+            <pre><code>@media (max-width: 768px) {
+    body {
+      background-color: lightblue;
+    }
+  }</code></pre>
+            <p><b>¿Para qué sirven?</b> Para que el contenido se vea bien tanto en celulares como en computadoras.
+                Algunos ejemplos útiles:</p>
+            <ul>
+                <li><code>max-width: 768px</code> → para celulares</li>
+                <li><code>min-width: 769px</code> → para pantallas grandes</li>
+                <li><code>orientation: portrait</code> → si el dispositivo está en vertical</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h2>El diseño resposive y la transmedialidad</h2>
+        <p>Una experiencia transmedia efectiva necesita que la historia o mensaje conserve su identidad, sin importar el
+            medio. El diseño responsive ayuda a que los elementos visuales y de navegación mantengan consistencia,
+            asegurando que cada dispositivo ofrezca una experiencia fluida, sin romper la inmersión del usuario en la
+            narrativa.</p>
+    </section>
+
+    <h2>Usos más comunes</h2>
+    <br />
+    <section class="cards">
+        <a href="menuhamburguesa.html">
+            <div class="card">
+                <h2>Menú hamburguesa</h2>
+                <p>Texto de ejemplo para la primera tarjeta. Adaptable y flexible.</p>
+            </div>
+        </a>
+        <a href="imagenesfluidas.html">
+            <div class="card">
+                <h2>Imágenes fluidas</h2>
+                <p>Este contenido también se acomoda según el tamaño de pantalla.</p>
+            </div>
+        </a>
+        <a href="reorganizacion.html">
+            <div class="card">
+                <h2>Reorganización de contenido</h2>
+                <p>Diseñado para ser visualmente claro y fácil de leer.</p>
+                <br>
+            </div>
+        </a>
+    </section>
+
+    <script>
+        function mostrarExplicacion() {
+            const box = document.getElementById("explicacion");
+            box.style.display = box.style.display === "none" || box.style.display === "" ? "block" : "none";
+        }
+    </script>
+</body>
+
+</html>

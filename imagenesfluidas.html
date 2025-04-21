@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imágenes Fluidas</title>
+    <link rel="stylesheet" href="diseño.css" />
+</head>
+<script>
+    const galeria = document.getElementById('galeria');
+    const izquierda = document.querySelector('.flecha.izquierda');
+    const derecha = document.querySelector('.flecha.derecha');
+
+    izquierda.addEventListener('click', () => {
+        galeria.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    derecha.addEventListener('click', () => {
+        galeria.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+</script>
+
+<body>
+    <section class="galeria-responsive">
+        <h2>Galería de Imágenes</h2>
+        <div class="contenedor-galeria">
+            <button class="flecha izquierda" onclick="scrollGaleria(-1)">←</button>
+            <div class="galeria" id="galeria">
+                <img src="img/img1.jpg" alt="Imagen 1">
+                <img src="img/img2.jpg" alt="Imagen 2">
+                <img src="img/img7.jpg" alt="Imagen 3">
+                <img src="img/img4.jpg" alt="Imagen 4">
+                <img src="img/img5.jpg" alt="Imagen 5">
+                <img src="img/img6.jpg" alt="Imagen 6">
+                <img src="img/img8.jpg" alt="Imagen 8">
+                <img src="img/img9.jpg" alt="Imagen 9">
+                <img src="img/img10.jpg" alt="Imagen 10">
+                <img src="img/img11.jpg" alt="Imagen 11">
+                <img src="img/img12.jpg" alt="Imagen 12">
+                <img src="img/img13.jpg" alt="Imagen 13">
+            </div>
+            <button class="flecha derecha" onclick="scrollGaleria(1)">→</button>
+        </div>
+        <a href="desktop.html" class="boton-volver">Volver</a>
+    </section>
+</body>
+<script>
+    function scrollGaleria(direccion) {
+        const galeria = document.getElementById("galeria");
+        const scrollCantidad = 320; 
+        galeria.scrollBy({
+            left: direccion * scrollCantidad,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+</html>
